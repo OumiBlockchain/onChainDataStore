@@ -1,0 +1,26 @@
+{
+  "name": "onchaindatastore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OumiBlockchain/onChainDataStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OumiBlockchain/onChainDataStore/issues"
+  },
+  "homepage": "https://github.com/OumiBlockchain/onChainDataStore#readme",
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "^2.5.0",
+    "@openzeppelin/upgrades": "^2.8.0"
+  }
+}
