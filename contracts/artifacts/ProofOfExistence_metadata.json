@@ -57,89 +57,18 @@
 				"type": "event"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
+				"constant": true,
+				"inputs": [],
+				"name": "REVISION",
+				"outputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "previousOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "OwnershipTransferred",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "Paused",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "PauserAdded",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "PauserRemoved",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "Unpaused",
-				"type": "event"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "addPauser",
-				"outputs": [],
 				"payable": false,
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -151,21 +80,6 @@
 						"internalType": "bool",
 						"name": "",
 						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "getAppVersion",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"payable": false,
@@ -200,159 +114,12 @@
 				"constant": false,
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "sender",
-						"type": "address"
-					}
-				],
-				"name": "initialize",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "isOwner",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "isPauser",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "pause",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "paused",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "renounceOwnership",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "renouncePauser",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
 						"internalType": "string",
 						"name": "hash",
 						"type": "string"
 					}
 				],
 				"name": "storeHash",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "unpause",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_appVersion",
-						"type": "uint256"
-					}
-				],
-				"name": "updateAppVersion",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -404,44 +171,12 @@
 			"author": "Mustafa Refaey <mustafarefaey@gmail.com>",
 			"details": "Implementation of proof of existence contract.",
 			"methods": {
-				"getAppVersion()": {
-					"return": "the frontend app version"
-				},
 				"getContractStatus()": {
 					"return": "the contract status"
-				},
-				"initialize(address)": {
-					"details": "Initializes the contract in unpaused state. Assigns the Pauser role to the deployer."
-				},
-				"isOwner()": {
-					"details": "Returns true if the caller is the current owner."
-				},
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
-				"pause()": {
-					"details": "Called by a pauser to pause, triggers stopped state."
-				},
-				"paused()": {
-					"details": "Returns true if the contract is paused, and false otherwise."
-				},
-				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
 				},
 				"storeHash(string)": {
 					"params": {
 						"hash": "The hash to be stored"
-					}
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				},
-				"unpause()": {
-					"details": "Called by a pauser to unpause, returns to normal state."
-				},
-				"updateAppVersion(uint256)": {
-					"params": {
-						"_appVersion": "The new frontend app version"
 					}
 				},
 				"updateContractStatus(bool)": {
@@ -460,17 +195,11 @@
 		},
 		"userdoc": {
 			"methods": {
-				"getAppVersion()": {
-					"notice": "Retrieves the frontend app version"
-				},
 				"getContractStatus()": {
 					"notice": "Retrieves the contract status"
 				},
 				"storeHash(string)": {
 					"notice": "Stores the hash in the contract's state"
-				},
-				"updateAppVersion(uint256)": {
-					"notice": "Updates the frontend app version"
 				},
 				"updateContractStatus(bool)": {
 					"notice": "Enable/Disable contract functionality (a circuit breaker)"
@@ -483,7 +212,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"localhost/contracts/ProofOfExistence.sol": "ProofOfExistence"
+			"localhost/contracts/ProofOfExistenceV2.sol": "ProofOfExistence"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -494,53 +223,18 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol": {
-			"keccak256": "0x3491510fa4862af1a43f6c860d9cf7392240196540cd3c0eea79d374d419c5a1",
+		"localhost/contracts/Dummy/VersionedInitializable.sol": {
+			"keccak256": "0x73b221d064abf0ef5fef6617c82d47ff69b9912fca2a389f54966679d4cbe98a",
 			"urls": [
-				"bzz-raw://3e51386d74eb723d3acaaddafce1dd0b4082ad4c10ddba6b9fc154aad2930d02",
-				"dweb:/ipfs/QmcA8Huap1c7YjdVjx5TGasxKNMLgsa3XyLvQUaMa1nMt8"
+				"bzz-raw://f566cae666f303347b6812ad842df1496ef069822bcc09cf0c19188aea282f10",
+				"dweb:/ipfs/QmT179uWsPpXSfYUiKac2viTmn34mv4pXz6M1UTa52ERxQ"
 			]
 		},
-		"@openzeppelin/contracts-ethereum-package/contracts/access/Roles.sol": {
-			"keccak256": "0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb",
+		"localhost/contracts/ProofOfExistenceV2.sol": {
+			"keccak256": "0x334a183c9e3b8948f4157318dcd483513eb2d998ed56ded575598c1bfa1fe41b",
 			"urls": [
-				"bzz-raw://00a788c4631466c220b385bdd100c571d24b2deccd657615cfbcef6cadf669a4",
-				"dweb:/ipfs/QmTEwDbjJNxmMNCDMqtuou3dyM8Wtp8Q9NFvn7SAVM7Jf3"
-			]
-		},
-		"@openzeppelin/contracts-ethereum-package/contracts/access/roles/PauserRole.sol": {
-			"keccak256": "0x50f630d59842559f6b0df1c727e1ea1495ea1a26aac1c2283a09a881162eb2e8",
-			"urls": [
-				"bzz-raw://75bce03ca2a280f4111b229a00ff133dc2e4a15c064b2e0e497550c9c9dcf5da",
-				"dweb:/ipfs/QmbenCfPjLoKSr1uHzrvVgNfcqonRj62ivyQkG9TSMuTUD"
-			]
-		},
-		"@openzeppelin/contracts-ethereum-package/contracts/lifecycle/Pausable.sol": {
-			"keccak256": "0x54955bd9a96f48385adbdfcd27da9b9efc9531a81555015f92c3137ec301f8f0",
-			"urls": [
-				"bzz-raw://72605a1bfa13b314957172f913ffac1903657938b1b72029bef2209a24dc7b30",
-				"dweb:/ipfs/QmSqo87vmf4MYrBg2S3bRof17DTrCM8vkYHv8gpNgS4WSv"
-			]
-		},
-		"@openzeppelin/contracts-ethereum-package/contracts/ownership/Ownable.sol": {
-			"keccak256": "0xd7e8ab76fa35c4d8d35a06a6ed538cadab8b75a1aa00594ced1568b2c0cadde3",
-			"urls": [
-				"bzz-raw://a3f816aa3e6161b4cf882ad34755673848d835f7fb964db49bcef9df14570cef",
-				"dweb:/ipfs/QmQACSH1W7pKQnqTAqpuEP8ychp3PvosfnyondLaLE1nVq"
-			]
-		},
-		"@openzeppelin/upgrades/contracts/Initializable.sol": {
-			"keccak256": "0x9bfec92e36234ecc99b5d37230acb6cd1f99560233753162204104a4897e8721",
-			"urls": [
-				"bzz-raw://5cf7c208583d4d046d75bd99f5507412ab01cce9dd9f802ce9768a416d93ea2f",
-				"dweb:/ipfs/QmcQS1BBMPpVEkXP3qzwSjxHNrqDek8YeR7xbVWDC9ApC7"
-			]
-		},
-		"localhost/contracts/ProofOfExistence.sol": {
-			"keccak256": "0xc32a79f3d6c757e0f4e17748cfd9fd3b9c0f1f94fef9be9633d25d14ea59494b",
-			"urls": [
-				"bzz-raw://808f03896eb02a615d05aef37a53c6feb550a96f6d5a62bb0a3150d8e7fd060b",
-				"dweb:/ipfs/QmXxPmEJmbEurXF7n6k4mAaVcxXSMa5LjSMC7VNftwn66C"
+				"bzz-raw://f684bfee6550dc988974b5b0e8ddbfcca794bdb341147237e17d28d4e52683ee",
+				"dweb:/ipfs/QmewvkQ6T4ctAJr9dGLoAit1G9SjL6i9CKaAAakyTQmBxq"
 			]
 		}
 	},

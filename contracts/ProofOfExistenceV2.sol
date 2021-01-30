@@ -9,18 +9,19 @@ import "./Dummy/VersionedInitializable.sol";
 contract ProofOfExistenceV2 is VersionedInitializable{
     /// the owner of the contract
     address owner;
-    
-    uint256 public constant REVISION = 0x3;
+
+    /// frontend app version
+    uint256 public constant REVISION = 0x5;
 
     /// a circuit breaker to stop the contract
     bool public contractStatus;
 
     /// a mapping of the hash uploaders and their hashes, stamped by the block number
     mapping(address => mapping(string => uint256)) private hashes;
-
-
+    
     uint256 public check;
-
+    
+    
     /// an event to be emitted when a new hash has been added
     event LogAdditionEvent(
         address indexed stampper,
@@ -52,8 +53,7 @@ contract ProofOfExistenceV2 is VersionedInitializable{
 
         contractStatus = true;
         emit LogAppVersionUpdated(REVISION);
-        check = 3;
-        
+        check = 234;
     }
 
     function getRevision() internal pure returns (uint256) {
